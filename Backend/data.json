@@ -1,0 +1,162 @@
+[
+    {
+        "id": "68eed87c22bbd37fd53739c8",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=0",
+        "datePublish": "2015-04-28",
+        "nameBook": "id laboris",
+        "gender": "Misterio"
+    },
+    {
+        "id": "68eed87c7b6c5d84daebf292",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=1",
+        "datePublish": "2020-03-04",
+        "nameBook": "velit ipsum",
+        "gender": "Terror"
+    },
+    {
+        "id": "68eed87c02651bd4df6491d4",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=2",
+        "datePublish": "2020-09-10",
+        "nameBook": "exercitation consequat",
+        "gender": "Ciencia Ficción"
+    },
+    {
+        "id": "68eed87c6c9d55942a86923f",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=3",
+        "datePublish": "2025-06-04",
+        "nameBook": "sit fugiat",
+        "gender": "Terror"
+    },
+    {
+        "id": "68eed87c0f2df88c6b97ea53",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=4",
+        "datePublish": "2021-09-19",
+        "nameBook": "proident Lorem",
+        "gender": "Fantasía"
+    },
+    {
+        "id": "68eed87cba11217434cf1293",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=5",
+        "datePublish": "2012-02-06",
+        "nameBook": "labore aute",
+        "gender": "Misterio"
+    },
+    {
+        "id": "68eed87cc6761b2430602adb",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=6",
+        "datePublish": "2024-08-21",
+        "nameBook": "velit cillum",
+        "gender": "Misterio"
+    },
+    {
+        "id": "68eed87c28dfbcd5f1865220",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=7",
+        "datePublish": "2015-02-27",
+        "nameBook": "et laboris",
+        "gender": "Romance"
+    },
+    {
+        "id": "68eed87c12027007e5df2920",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=8",
+        "datePublish": "2019-01-06",
+        "nameBook": "ea aliqua",
+        "gender": "Terror"
+    },
+    {
+        "id": "68eed87c27c0c1a32aa433e4",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=9",
+        "datePublish": "2013-01-27",
+        "nameBook": "labore mollit",
+        "gender": "Terror"
+    },
+    {
+        "id": "68eed87c9985a5fdb3c3149a",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=10",
+        "datePublish": "2010-09-26",
+        "nameBook": "proident sint",
+        "gender": "Ciencia Ficción"
+    },
+    {
+        "id": "68eed87c7421429235cf21ff",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=11",
+        "datePublish": "2025-03-25",
+        "nameBook": "occaecat est",
+        "gender": "Romance"
+    },
+    {
+        "id": "68eed87ca6e0352ca1e65d3d",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=12",
+        "datePublish": "2012-11-17",
+        "nameBook": "ea deserunt",
+        "gender": "Fantasía"
+    },
+    {
+        "id": "68eed87c15c580800fe436d7",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=13",
+        "datePublish": "2022-06-30",
+        "nameBook": "adipisicing ea",
+        "gender": "Misterio"
+    },
+    {
+        "id": "68eed87c27db80f64089b661",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=14",
+        "datePublish": "2016-06-04",
+        "nameBook": "cillum dolor",
+        "gender": "Romance"
+    },
+    {
+        "id": "68eed87c464e469944c0c5f8",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=15",
+        "datePublish": "2015-04-22",
+        "nameBook": "cillum esse",
+        "gender": "Misterio"
+    },
+    {
+        "id": "68eed87cdbfd218a7dfde4cd",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=16",
+        "datePublish": "2010-05-11",
+        "nameBook": "voluptate occaecat",
+        "gender": "Romance"
+    },
+    {
+        "id": "68eed87c1cd74ca80d41a4d3",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=17",
+        "datePublish": "2018-05-22",
+        "nameBook": "culpa elit",
+        "gender": "Fantasía"
+    },
+    {
+        "id": "68eed87c9dcbc2f0ed750e6b",
+        "isActive": true,
+        "picture": "https://picsum.photos/200/300?random=18",
+        "datePublish": "2019-11-25",
+        "nameBook": "aliquip magna",
+        "gender": "Ciencia Ficción"
+    },
+    {
+        "id": "68eed87c25341182c4e3e5be",
+        "isActive": false,
+        "picture": "https://picsum.photos/200/300?random=19",
+        "datePublish": "2019-07-28",
+        "nameBook": "ut veniam",
+        "gender": "Romance"
+    }
+]
