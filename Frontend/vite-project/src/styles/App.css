@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
@@ -69,7 +69,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Grupo de bisqueda */
+/* Grupo de busqueda */
 .search-group {
   display: flex;
   gap: 12px;
@@ -156,7 +156,7 @@ body {
   font-weight: 600;
 }
 
-/* grrid de datos */
+/* grid de datos */
 .data-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -219,6 +219,54 @@ body {
   font-style: italic;
 }
 
+/* ESTILOS PARA BÚSQUEDA AVANZADA */
+.multi-params-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.param-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.param-row label {
+  min-width: 150px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.param-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.param-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Estilos para imágenes de libros */
+.book-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .api-tester {
@@ -243,5 +291,14 @@ body {
 
   .app-header h1 {
     font-size: 2rem;
+  }
+
+  .param-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .param-row label {
+    min-width: auto;
   }
 }
