@@ -244,6 +244,7 @@ const ApiTester = () => {
                 onChange={(e) =>
                   handleMultiParamChange("datePublish", e.target.value)
                 }
+                max={new Date().toISOString().split('T')[0]}
                 className="param-input"
               />
             </div>
