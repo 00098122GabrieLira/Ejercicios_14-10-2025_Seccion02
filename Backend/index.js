@@ -59,7 +59,19 @@ app.get("/dataInfo/:status", (req, res) => {
   });
 });
 
-app.get("/dataInfoQuery", async (req, res) => { });
+app.get("/dataInfoQuery", async (req, res) => {
+  const { status } = req.query;
+  const data = await fs.promises.readFile(path.join(__dirname, 'data.json'), 'utf8');
+  const jsonData = JSON.parse(data);
+  const isActive = status === "true";
+  const filtered = jsonData.filter(item => item.isActive === isActive);
+
+  res.json({
+    status: true,
+    data: filtered,
+    dateTime: new Date().toLocaleString(),
+  });
+ });
 
 app.get("/dataInfoQuery", async (req, res) => { });
 
