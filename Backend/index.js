@@ -1,6 +1,11 @@
 import express from "express";
 import cors from "cors";
-import fs from "fs";
+import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,25 +22,34 @@ app.use(
   })
 );
 
-app.get("/allData", async (req, res) => {});
+app.get("/allData", async (req, res) => {
+  try {
+    const data = await fs.readFile(path.join(__dirname, 'data.json'), 'utf8');
+    const jsonData = JSON.parse(data);
 
-app.get("/dataInfo/:idItem", async (req, res) => {});
+    res.json({
+      Status: true,
+      Data: jsonData,
+      dateTime: new Date().toISOString()
+    });
 
-app.get("/dataInfo/:status", async (req, res) => {
-  const { status } = req.params;
-  const isActive = status === "true";
-  const filtered = data.filter(item => item.isActive === isActive);
-
-  res.json({
-    status: true,
-    data: filtered,
-    dateTime: new Date().toLocaleString(),
-  });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({
+      Status: false,
+      message: "Error interno del servidor",
+      dateTime: new Date().toISOString()
+    });
+  }
 });
 
-app.get("/dataInfoQuery", async (req, res) => {});
+app.get("/dataInfo/:idItem", async (req, res) => { });
 
-app.get("/dataInfoQuery", async (req, res) => {});
+app.get("/dataInfo/:status", async (req, res) => {});
+
+app.get("/dataInfoQuery", async (req, res) => { });
+
+app.get("/dataInfoQuery", async (req, res) => { });
 
 app.listen(PORT, () => {
   console.log(`Backend corriendo en http://localhost:${PORT}`);
