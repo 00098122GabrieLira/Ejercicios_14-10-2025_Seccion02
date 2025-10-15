@@ -45,7 +45,19 @@ app.get("/allData", async (req, res) => {
 
 app.get("/dataInfo/:idItem", async (req, res) => { });
 
-app.get("/dataInfo/:status", async (req, res) => { });
+app.get("/dataInfo/:status", async (req, res) => {
+  const { status } = req.params;
+  const data = await fs.readFile(path.join(__dirname, "data.json"), "utf8");
+  const jsonData = JSON.parse(data);
+  const isActive = status === "true";
+  const filtered = jsonData.filter(item => item.isActive === isActive);
+
+  res.json({
+    status: true,
+    data: filtered,
+    dateTime: new Date().toLocaleString(),
+  });
+});
 
 app.get("/dataInfoQuery", async (req, res) => { });
 
