@@ -1,8 +1,11 @@
 import express from "express";
 import cors from "cors";
+import fs from "fs";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
 
 app.use(cors());
 app.use(express.json());
@@ -18,7 +21,17 @@ app.get("/allData", async (req, res) => {});
 
 app.get("/dataInfo/:idItem", async (req, res) => {});
 
-app.get("/dataInfo/:status", async (req, res) => {});
+app.get("/dataInfo/:status", async (req, res) => {
+  const { status } = req.params;
+  const isActive = status === "true";
+  const filtered = data.filter(item => item.isActive === isActive);
+
+  res.json({
+    status: true,
+    data: filtered,
+    dateTime: new Date().toLocaleString(),
+  });
+});
 
 app.get("/dataInfoQuery", async (req, res) => {});
 
