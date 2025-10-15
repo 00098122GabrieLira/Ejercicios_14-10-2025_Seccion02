@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import fs from "fs/promises";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -24,7 +24,7 @@ app.use(
 
 app.get("/allData", async (req, res) => {
   try {
-    const data = await fs.readFile(path.join(__dirname, 'data.json'), 'utf8');
+    const data = await fs.promises.readFile(path.join(__dirname, 'data.json'), 'utf8');
     const jsonData = JSON.parse(data);
 
     res.json({
@@ -45,9 +45,9 @@ app.get("/allData", async (req, res) => {
 
 app.get("/dataInfo/:idItem", async (req, res) => { });
 
-app.get("/dataInfo/:status", async (req, res) => {
+app.get("/dataInfo/:status", (req, res) => {
   const { status } = req.params;
-  const data = await fs.readFile(path.join(__dirname, "data.json"), "utf8");
+  const data = fs.readFileSync("./data.json", "utf8"); 
   const jsonData = JSON.parse(data);
   const isActive = status === "true";
   const filtered = jsonData.filter(item => item.isActive === isActive);
