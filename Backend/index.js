@@ -45,7 +45,7 @@ app.get("/allData", async (req, res) => {
 
 app.get("/dataInfo/:idItem", async (req, res) => { });
 
-app.get("/dataInfo/:status", async (req, res) => {});
+app.get("/dataInfo/:status", async (req, res) => { });
 
 app.get("/dataInfoQuery", async (req, res) => { });
 
