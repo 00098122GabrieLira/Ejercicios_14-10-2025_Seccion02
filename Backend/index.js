@@ -20,15 +20,34 @@ app.use(
   })
 );
 
-app.get("/allData", async (req, res) => {});
+app.get("/allData", async (req, res) => {
+  try {
+    const data = await fs.readFile(path.join(__dirname, 'data.json'), 'utf8');
+    const jsonData = JSON.parse(data);
 
-app.get("/dataInfo/:idItem", async (req, res) => {});
+    res.json({
+      Status: true,
+      Data: jsonData,
+      dateTime: new Date().toISOString()
+    });
 
-app.get("/dataInfo/:status", async (req, res) => {});
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({
+      Status: false,
+      message: "Error interno del servidor",
+      dateTime: new Date().toISOString()
+    });
+  }
+});
 
-app.get("/dataInfoQuery", async (req, res) => {});
+app.get("/dataInfo/:idItem", async (req, res) => { });
 
-app.get("/dataInfoQuery", async (req, res) => {});
+app.get("/dataInfo/:status", async (req, res) => { });
+
+app.get("/dataInfoQuery", async (req, res) => { });
+
+app.get("/dataInfoQuery", async (req, res) => { });
 
 app.listen(PORT, () => {
   console.log(`Backend corriendo en http://localhost:${PORT}`);
